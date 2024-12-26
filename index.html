@@ -154,7 +154,7 @@
     <div id="container">
         
         <div id="grad1">
-            <img id="myphoto" src="bharathimage.jpg" alt="Bharath's photo">
+            <img id="myphoto" src="../assets/bharathimage.jpg" alt="Bharath's photo">
            <em> <h1>Hey, I am Bharath</h1> </em>
             <strong><h3 id="MyHeading">Welcome to my portfolio ! </h3></strong>
             <button id="MyButton"><strong>CLICK</strong></button>
@@ -172,7 +172,7 @@
 
         <button id="showResume">Resume</button>
         <div id="resumeContainer">
-            <img id="resumeimg" src="../assets/Bharath_Resume. (1).pdf.jpg" alt="">
+            <img id="resumeimg" src="../assets/Bharath_Resume.jpg" alt="">
         </div>
     </div>  
     
@@ -206,7 +206,7 @@
             const img = resumeContainer.querySelector('img');
 
             if (resumeContainer.style.display === 'none' || !img.src) {
-                img.src = '../assets/Bharath_Resume. (1).pdf.jpg ';
+                img.src = '../assets/Bharath_Resume.jpg ';
                 resumeContainer.style.display = 'block';
                 this.innerText = 'Hide Resume';
             } else {
