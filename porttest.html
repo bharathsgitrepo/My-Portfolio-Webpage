@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            height: 130vh;
+        }
+
+        #container {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: 100%;
+        }
+
+
+        #grad1, #grad2 {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            /* justify-content: center; */
+            box-sizing: border-box;
+        }
+
+        #grad1 {
+            background-image: linear-gradient(to right, rgb(0, 0, 101), rgb(83, 83, 252));
+            color: rgb(242, 231, 231);
+            margin-top: 150px;
+            /* justify-content: center; */
+            text-align: center;
+            align-items: center;
+        }
+
+        #grad2 {
+            background-image: linear-gradient(to left, rgb(0, 0, 101), rgb(83, 83, 243) );
+            height: 130vh;
+            /* background-color: #8387fe; */
+            display: flex;
+            flex-direction: row;
+            /* font-family: Harrington; */
+
+
+        }
+
+        #myphoto {
+            margin-top: -40px;
+            width: 200px;
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(25, 12, 166, 0.5);
+            transition: transform 0.3s ease;
+    
+        }
+
+        #myphoto:hover {
+            transform: scale(1.2);
+        }
+
+        #MyButton {
+            color: rgba(9, 9, 10, 0.867);
+            border: 4px solid rgb(44, 8, 248);
+            border-radius: 50%;
+            width: 90px;
+            height: 90px;
+            /* box-shadow: 5px 5px 55px 25px rgb(60, 63, 250);  */
+            cursor: pointer; 
+    
+        }
+
+
+        #details {
+            display: none; /* Hide details initially */
+            font-size: 18px;
+            margin-left: 20px;
+            color: rgb(229, 229, 253);
+            /* text-align: center; */
+        }
+
+        #showdetailsButton {
+
+            margin-top: 20px;
+            margin-left: 20px;
+            margin-right: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: rgb(7, 7, 255);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            transition: background-color 0.3s ease;
+        }
+
+        #showdetailsButton:hover {
+            background-color: rgb(151, 151, 225);
+        }
+
+        #showResume {
+            margin-top: 20px;
+            margin-left: 20px;
+            margin-right: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: rgb(0, 0, 255);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            transition: background-color 0.3s ease;
+        }
+
+        #showResume:hover {
+            background-color: rgb(151, 151, 225);
+        }
+
+        #resumeContainer {
+            margin: 20px auto;
+            display: none;  
+        }
+
+ 
+        #resumeContainer img {
+            margin-right: 50px;
+            margin-left: 50px;
+            width: 90%;
+            /* max-width: 800px;  */
+            border: 2px solid #ccc;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            /* display: flex;
+            flex-direction: column; */
+            margin-top: 0px;
+            height: 88vh;
+        } 
+
+
+        #grad2{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            /* justify-content: center;  */
+            box-sizing: border-box;
+        } 
+   
+    
+       
+    </style>
+</head>
+<body>
+    <p></p>
+    <div id="container">
+        
+        <div id="grad1">
+            <img id="myphoto" src="../assets/FB_IMG_1708715526215.jpg" alt="Bharath's photo">
+           <em> <h1>Hey, I am Bharath</h1> </em>
+            <strong><h3 id="MyHeading">Welcome to my portfolio ! </h3></strong>
+            <button id="MyButton"><strong>CLICK</strong></button>
+        </div>
+
+        
+        <div id="grad2">
+    
+        <button id="showdetailsButton">About</button>
+        <div id="details">
+            <p><strong>Name:</strong> Bharath</p>
+            <p><strong>Role:</strong>Aspiring Web Developer</p>
+            <p><strong>Description:</strong> Enthusiastic about building web applications and learning new technologies!</p>
+        </div>
+
+        <button id="showResume">Resume</button>
+        <div id="resumeContainer">
+            <img id="resumeimg" src="../assets/Bharath_Resume. (1).pdf.jpg" alt="">
+        </div>
+    </div>  
+    
+</div>
+
+
+  
+
+
+<script>
+   
+    const MyButton = document.getElementById('MyButton');
+    MyButton.addEventListener('click', function() {
+        document.getElementById('MyHeading').innerText = "Actively looking for a Job🥺"
+    })
+
+    const button = document.getElementById('showdetailsButton');
+        const details = document.getElementById('details');
+        button.addEventListener('click', function() {
+            if (details.style.display === 'none') {
+                details.style.display = 'block';
+                button.innerText = 'Hide Details'; 
+            } else {
+                details.style.display = 'none';
+                button.innerText = 'Show Details'; 
+            }
+        });
+
+        document.getElementById('showResume').addEventListener('click', function() {
+            const resumeContainer = document.getElementById('resumeContainer');
+            const img = resumeContainer.querySelector('img');
+
+            if (resumeContainer.style.display === 'none' || !img.src) {
+                img.src = '../assets/Bharath_Resume. (1).pdf.jpg ';
+                resumeContainer.style.display = 'block';
+                this.innerText = 'Hide Resume';
+            } else {
+                resumeContainer.style.display = 'none';
+                this.innerText = 'Show Resume';
+            }
+        });
+
+  
+
+   
+</script>
+</body>
+</html> 
