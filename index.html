@@ -50,12 +50,7 @@
             display: flex;
             flex-direction: row;
             /* font-family: Harrington; */
-
-
         }
-
-   
-
         #MyButton {
             color: rgba(9, 9, 10, 0.867);
             border: 1px solid rgb(69, 37, 253);
@@ -68,7 +63,6 @@
             cursor: pointer; 
     
         }
-
 
         #details {
             display: none; 
@@ -302,7 +296,7 @@
             const img = resumeContainer.querySelector('img');
 
             if (resumeContainer.style.display === 'none' || !img.src) {
-                img.src = '../assets/Bharath_Resume.jpg';
+                img.src = 'BharathResume.jpg';
                 resumeContainer.style.display = 'block';
                 this.innerText = 'Hide Resume';
             } else {
