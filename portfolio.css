@@ -1,0 +1,208 @@
+body {
+    margin: 0;
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+    flex-wrap:wrap ;
+}
+
+#container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    /* height: ; */
+}
+
+
+ #grad1, #grad2 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center;  */
+     box-sizing: border-box; 
+ }  
+
+#grad1 {
+    background-image: linear-gradient(to bottom, rgb(0, 0, 101), rgb(83, 83, 252));
+    color: rgb(242, 231, 231);
+    /* margin-top: 100px; */
+    justify-content: center;
+    /* text-align: center; */
+    align-items: center;
+    
+    display: flex;
+    flex-direction: column;
+
+}
+
+#grad2 {
+    background-image: linear-gradient(to top, rgb(0, 0, 101), rgb(83, 83, 252) );
+    height: auto;
+    /* background-color: #8387fe; */
+    display: flex;
+    flex-direction: row;
+    /* font-family: Harrington; */
+
+
+}
+
+/* #myphoto {
+    margin-top: 50px;
+    width: 200px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(25, 12, 166, 0.5);
+    transition: transform 0.3s ease;
+
+} */
+/* 
+#myphoto:hover {
+    transform: scale(1.2);
+} */
+
+#MyButton {
+    color: rgba(9, 9, 10, 0.867);
+    border: 1px solid rgb(69, 37, 253);
+    font-size: large;
+    border-radius: 25%;
+    width: 100px;
+    height: 40px;
+    /* box-shadow: 5px 5px 55px 25px rgb(49, 52, 246);  */
+    box-shadow: 0 4px 10px rgba(46, 28, 241, 0.5);
+    cursor: pointer; 
+
+}
+
+
+#details {
+    display: none; 
+    font-size: 20px;
+    margin-left: 40px;
+    color: rgb(229, 229, 253);
+    /* text-align: center; */
+}
+
+#MyHeading{
+    font-size: 24px;
+    margin-left: 20px;
+}
+
+#showdetailsButton, #showResume {
+
+    margin-top: 70px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: rgb(4, 4, 253);
+    color: rgb(252, 251, 255);
+    border: none;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+#showResume {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: rgb(4, 4, 255);
+    color: rgb(251, 251, 251);
+    border: none;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+
+#resumeContainer {
+    margin: 20px auto;
+    display: none;  
+}
+
+
+#resumeContainer img {
+   max-width: 800px;
+    border: 2px solid #ccc;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 0px;
+    /* height: 88vh; */
+} 
+
+#grad2{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.project-link {
+display: inline-block;
+font-size: 16px;
+font-weight: bold;
+color: white;
+background-color: rgb(4, 35, 232);
+text-decoration: none;
+padding: 10px 20px;
+border-radius: 5px;
+transition: background-color 0.3s ease, transform 0.2s ease;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project-link:hover {
+background-color: rgb(0, 102, 215);
+transform: scale(1.05);
+}
+
+.footer {
+background-color: #333;
+color: white;
+text-align: center;
+padding: 20px 10px;
+position: relative;
+left: 0;
+bottom: 0;
+width: 100%;
+}
+
+
+.footer p {
+margin: 10px 0 0;
+font-size: 14px;
+}
+
+.contactcont a:hover {
+text-decoration: underline;
+
+}
+
+.horizontal-container {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 150px; /* Adjust gap between image and text */
+margin-top: 50px;
+margin-bottom: 40px;
+}
+
+#myphoto {
+width: 220px; /* Adjust size of the image */
+border-radius: 50%;
+box-shadow: 0 4px 10px rgba(25, 12, 166, 0.5);
+transition: transform 0.3s ease;
+}
+
+#myphoto:hover {
+transform: scale(1.2);
+}
+
+.heading-text {
+font-size: 34px;
+font-style: italic;
+color: rgb(242, 231, 231);
+}
+
+.heading-text:hover{
+text-decoration: underline;
+}
